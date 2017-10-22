@@ -8,24 +8,24 @@ class App extends Component {
         <View style={{ flex: 1, flexDirection: 'row' }}>
           <View style={{ flex: 1, backgroundColor: '#832a0d' }}>
           </View>
-          <View style={{ flex: 1, backgroundColor: '#832a0d' }}>
+          <View style={{ flex: 1, backgroundColor: '#f4a460' }}>
           </View>
-          <View style={{ flex: 1, backgroundColor: '#832a0d' }}>
+          <View style={{ flex: 1, backgroundColor: '#bc8f8f' }}>
           </View>
-          <View style={{ flex: 1, backgroundColor: '#832a0d' }}>
+          <View style={{ flex: 1, backgroundColor: '#cd853f' }}>
           </View>
         </View>
 
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, backgroundColor: 'red' }}>
         </View>
 
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 6, backgroundColor: 'blue' }}>
         </View>
 
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 7, backgroundColor: 'black' }}>
         </View>
 
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, backgroundColor: 'white' }}>
         </View>
       </View>
     );
