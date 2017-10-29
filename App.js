@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 import { Constants } from 'expo';
 
 class App extends Component {
   render() {
+    const textoPrincipal = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel lacus vel justo luctus viverra id vitae urna. Duis condimentum sollicitudin turpis, molestie mattis mauris feugiat ac. Praesent gravida ultricies ante, vel rutrum nulla dapibus non. In non lacus id odio lacinia suscipit. Nulla blandit dolor elit, pharetra ultricies tortor tortor tortor convallis eget.';
+
     return (
       <View style={styles.container}>
         <View style={{ flex: 1, flexDirection: 'row' }}>
@@ -21,7 +23,16 @@ class App extends Component {
           <Text style={{ fontSize: 24 }}>Revvista Nativva</Text>
         </View>
 
-        <View style={{ flex: 6, backgroundColor: 'blue' }}>
+        <View style={styles.mainContainer}>
+          <View style={{ flex: 3 }}>
+            <Text style={{ fontSize: 16 }}>
+              {textoPrincipal.slice(0, 300) + ' ...'}
+            </Text>
+          </View>
+          <Image
+            source={require('./imagens/Burlwood.png')}
+            style={{ flex: 2, width: undefined, height: undefined }}
+          />
         </View>
 
         <View style={{ flex: 7, backgroundColor: 'black' }}>
@@ -47,6 +58,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomWidth: 6,
+  },
+  mainContainer: {
+    flex: 6,
+    backgroundColor: '#f8ecc2',
+    flexDirection: 'row',
+    padding: 8,
   },
 });
 
