@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { Constants } from 'expo';
 
 class App extends Component {
@@ -17,7 +17,8 @@ class App extends Component {
           </View>
         </View>
 
-        <View style={{ flex: 1, backgroundColor: 'red' }}>
+        <View style={styles.titleContainer}>
+          <Text style={{ fontSize: 24 }}>Revvista Nativva</Text>
         </View>
 
         <View style={{ flex: 6, backgroundColor: 'blue' }}>
@@ -39,6 +40,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#c19a6b',
     padding: 13,
     marginTop: Constants.statusBarHeight,
+  },
+  titleContainer: {
+    flex: 1,
+    backgroundColor: '#f8ecc2',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomWidth: 6,
   },
 });
 
