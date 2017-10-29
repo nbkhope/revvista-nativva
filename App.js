@@ -26,7 +26,7 @@ class App extends Component {
         <View style={styles.mainContainer}>
           <View style={{ flex: 3 }}>
             <Text style={{ fontSize: 16 }}>
-              {textoPrincipal.slice(0, 300) + ' ...'}
+              {textoPrincipal.slice(0, 256) + ' ...'}
             </Text>
           </View>
           <Image
@@ -35,7 +35,12 @@ class App extends Component {
           />
         </View>
 
-        <View style={{ flex: 7, backgroundColor: 'black' }}>
+        <View style={{ flex: 7, backgroundColor: '#f8ecc2', borderTopWidth: 6, borderBottomWidth: 6, flexDirection: 'row' }}>
+          <View style={{ flex: 1, borderRightWidth: 3 }}>
+          </View>
+
+          <View style={{ flex: 1, borderLeftWidth: 3 }}>
+          </View>
         </View>
 
         <View style={{ flex: 1, backgroundColor: 'white' }}>
