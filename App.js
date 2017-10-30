@@ -5,6 +5,7 @@ import { Constants } from 'expo';
 class App extends Component {
   render() {
     const textoPrincipal = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel lacus vel justo luctus viverra id vitae urna. Duis condimentum sollicitudin turpis, molestie mattis mauris feugiat ac. Praesent gravida ultricies ante, vel rutrum nulla dapibus non. In non lacus id odio lacinia suscipit. Nulla blandit dolor elit, pharetra ultricies tortor tortor tortor convallis eget.';
+    const textoArtigo1 = 'Mauris vel tincidunt odio. Donec eget eros ut lorem vehicula pellentesque. Cras ac metus viverra sapien eleifend auctor. Nulla porta lacus in nibh imperdiet, vitae tempus urna consectetur. Etiam pharetra finibus nulla nec auctor. Vivamus et varius ipsum. Nullam ornare augue a neque posuere tincidunt.';
 
     return (
       <View style={styles.container}>
@@ -37,6 +38,26 @@ class App extends Component {
 
         <View style={{ flex: 7, backgroundColor: '#f8ecc2', borderTopWidth: 6, borderBottomWidth: 6, flexDirection: 'row' }}>
           <View style={{ flex: 1, borderRightWidth: 3 }}>
+            <View style={{ flex: 1, alignItems: 'center' }}>
+              <Text style={{ fontSize: 20 }}>Title 1</Text>
+            </View>
+
+            <View style={{ flex: 6 }}>
+              <View style={{ flex: 1, flexDirection: 'row' }}>
+                <Image
+                  source={require('./imagens/Leopard.png')}
+                  style={{ flex: 1, width: undefined, height: undefined }}
+                />
+                <View style={{ flex: 1 }}>
+                  <Text>{textoArtigo1.slice(0, 60)}</Text>
+                </View>
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text>
+                  {textoArtigo1.slice(60, 180)}{textoArtigo1.length > 180 ? '...' : ''}
+                </Text>
+              </View>
+            </View>
           </View>
 
           <View style={{ flex: 1, borderLeftWidth: 3 }}>
