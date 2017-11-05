@@ -86,7 +86,8 @@ class App extends Component {
           </View>
         </View>
 
-        <View style={{ flex: 1, backgroundColor: 'white' }}>
+        <View style={styles.footerContainer}>
+          <Text style={{ fontSize: 16 }}>Copyright (c) 2017 Revvista Nativva</Text>
         </View>
       </View>
     );
@@ -119,6 +120,12 @@ const styles = StyleSheet.create({
     borderTopWidth: 6,
     borderBottomWidth: 6,
     flexDirection: 'row',
+  },
+  footerContainer: {
+    flex: 1,
+    backgroundColor: '#d3d3d3',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
