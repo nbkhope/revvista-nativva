@@ -4,6 +4,8 @@ import { Constants } from 'expo';
 
 import Header from './components/Header';
 import Main from './components/Main';
+import Secondary from './components/Secondary';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -17,58 +19,14 @@ class App extends Component {
 
         <Main textoPrincipal={textoPrincipal} />
 
-        <View style={styles.secondaryContainer}>
-          <View style={{ flex: 1, borderRightWidth: 3 }}>
-            <View style={{ flex: 1, alignItems: 'center' }}>
-              <Text style={{ fontSize: 20 }}>Title 1</Text>
-            </View>
+        <Secondary
+          textoArtigo1={textoArtigo1}
+          textoArtigo2={textoArtigo2}
+        />
 
-            <View style={{ flex: 6, padding: 8 }}>
-              <View style={{ flex: 1, flexDirection: 'row' }}>
-                <Image
-                  source={require('./imagens/Leopard.png')}
-                  style={{ flex: 1, width: undefined, height: undefined }}
-                />
-                <View style={{ flex: 1, paddingLeft: 8 }}>
-                  <Text>{textoArtigo1.slice(0, 60)}</Text>
-                </View>
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text>
-                  {textoArtigo1.slice(60, 180)}{textoArtigo1.length > 180 ? '...' : ''}
-                </Text>
-              </View>
-            </View>
-          </View>
-
-          <View style={{ flex: 1, borderLeftWidth: 3 }}>
-            <View style={{ flex: 1, alignItems: 'center' }}>
-              <Text style={{ fontSize: 20 }}>Title 2</Text>
-            </View>
-            <View style={{ flex: 6, padding: 8 }}>
-              <View style={{ flex: 1 }}>
-                <Text>{textoArtigo2.slice(0, 120)}</Text>
-              </View>
-
-              <View style={{ flex: 1, flexDirection: 'row' }}>
-                <Image
-                  source={require('./imagens/Sky.png')}
-                  style={{ flex: 2, width: undefined, height: undefined }}
-                />
-                <View style={{ flex: 3, paddingLeft: 8 }}>
-                  <Text>
-                    {textoArtigo2.slice(120, 180)}
-                    {textoArtigo2.length > 180 ? '...' : ''}
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-
-        <View style={styles.footerContainer}>
-          <Text style={{ fontSize: 16 }}>Copyright (c) 2017 Revvista Nativva</Text>
-        </View>
+        <Footer>
+          Copyright (c) 2017 Revvista Nativva
+        </Footer>
       </View>
     );
   }
@@ -80,19 +38,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#c19a6b',
     padding: 13,
     marginTop: Constants.statusBarHeight,
-  },
-  secondaryContainer: {
-    flex: 7,
-    backgroundColor: '#f8ecc2',
-    borderTopWidth: 6,
-    borderBottomWidth: 6,
-    flexDirection: 'row',
-  },
-  footerContainer: {
-    flex: 1,
-    backgroundColor: '#d3d3d3',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 });
 
