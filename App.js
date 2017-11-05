@@ -6,6 +6,7 @@ class App extends Component {
   render() {
     const textoPrincipal = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel lacus vel justo luctus viverra id vitae urna. Duis condimentum sollicitudin turpis, molestie mattis mauris feugiat ac. Praesent gravida ultricies ante, vel rutrum nulla dapibus non. In non lacus id odio lacinia suscipit. Nulla blandit dolor elit, pharetra ultricies tortor tortor tortor convallis eget.';
     const textoArtigo1 = 'Mauris vel tincidunt odio. Donec eget eros ut lorem vehicula pellentesque. Cras ac metus viverra sapien eleifend auctor. Nulla porta lacus in nibh imperdiet, vitae tempus urna consectetur. Etiam pharetra finibus nulla nec auctor. Vivamus et varius ipsum. Nullam ornare augue a neque posuere tincidunt.';
+    const textoArtigo2 = 'In elit odio, dapibus vel pharetra vitae, semper in magna. Phasellus luctus faucibus eros. Sed molestie ut dolor molestie fermentum. Donec vitae ex nisi. Aliquam erat volutpat. Praesent sapien nunc, commodo nec libero quis, dignissim mollis turpis. Nulla tortor tellus, vulputate eget tincidunt vel, semper quis nunc. Nulla facilisi. Integer commodo vehicula vehicula. Donec sit amet eleifend nulla, id tincidunt mi. Sed at risus quis augue facilisis consectetur. Suspendisse lectus tortor, accumsan nec hendrerit ut, rutrum sed sapien. Suspendisse ornare nulla eu leo facilisis pellentesque.';
 
     return (
       <View style={styles.container}>
@@ -36,19 +37,19 @@ class App extends Component {
           />
         </View>
 
-        <View style={{ flex: 7, backgroundColor: '#f8ecc2', borderTopWidth: 6, borderBottomWidth: 6, flexDirection: 'row' }}>
+        <View style={styles.secondaryContainer}>
           <View style={{ flex: 1, borderRightWidth: 3 }}>
             <View style={{ flex: 1, alignItems: 'center' }}>
               <Text style={{ fontSize: 20 }}>Title 1</Text>
             </View>
 
-            <View style={{ flex: 6 }}>
+            <View style={{ flex: 6, padding: 8 }}>
               <View style={{ flex: 1, flexDirection: 'row' }}>
                 <Image
                   source={require('./imagens/Leopard.png')}
                   style={{ flex: 1, width: undefined, height: undefined }}
                 />
-                <View style={{ flex: 1 }}>
+                <View style={{ flex: 1, paddingLeft: 8 }}>
                   <Text>{textoArtigo1.slice(0, 60)}</Text>
                 </View>
               </View>
@@ -61,6 +62,27 @@ class App extends Component {
           </View>
 
           <View style={{ flex: 1, borderLeftWidth: 3 }}>
+            <View style={{ flex: 1, alignItems: 'center' }}>
+              <Text style={{ fontSize: 20 }}>Title 2</Text>
+            </View>
+            <View style={{ flex: 6, padding: 8 }}>
+              <View style={{ flex: 1 }}>
+                <Text>{textoArtigo2.slice(0, 120)}</Text>
+              </View>
+
+              <View style={{ flex: 1, flexDirection: 'row' }}>
+                <Image
+                  source={require('./imagens/Sky.png')}
+                  style={{ flex: 2, width: undefined, height: undefined }}
+                />
+                <View style={{ flex: 3, paddingLeft: 8 }}>
+                  <Text>
+                    {textoArtigo2.slice(120, 180)}
+                    {textoArtigo2.length > 180 ? '...' : ''}
+                  </Text>
+                </View>
+              </View>
+            </View>
           </View>
         </View>
 
@@ -90,6 +112,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8ecc2',
     flexDirection: 'row',
     padding: 8,
+  },
+  secondaryContainer: {
+    flex: 7,
+    backgroundColor: '#f8ecc2',
+    borderTopWidth: 6,
+    borderBottomWidth: 6,
+    flexDirection: 'row',
   },
 });
 
