@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 
 class App extends Component {
   render() {
